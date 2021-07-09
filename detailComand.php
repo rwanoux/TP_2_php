@@ -70,7 +70,6 @@ $ID = $_GET["id"]; //récupère l'ID de la commande
                             <td><?php echo $Row ["HT"]; ?></td>
                             <td><img src="img/<?php echo $Row ["Produit_Image"];?>"/></td>
                             
-                            </td>
                             
                             
                         </tr>
