@@ -1,5 +1,5 @@
 <?php
-$titrePage = "#";
+$titrePage = "liste des clients";
 include("include/header.php");
 
 
@@ -7,17 +7,36 @@ include("include/header.php");
 ?>
 
 <div class="container-fluid">
-    <h1>nos clients</h1>
+    <h1 class="text-center">nos clients</h1>
 
-<table>
+    <ul>
+        <?php
+        //récupération liste clients
+        $clientList=$pdo->query(getAllFrom('clients'));
+        $clientRow = $clientList->fetchAll(PDO::FETCH_ASSOC);
 
-    
-    <tr>
+        //pour chaque client un élément de list
+        foreach ($clientRow as $index=>$cl) {
+            ?>
+        <li id="clientList">
+            <a href="detailClient.php?id=<?php echo $cl["Client_ID"];?>">
+                <?php echo $cl["Client_Prenom"].' '.$cl["Client_Nom"];?>
+            </a>
+        </li>
 
-    </tr>
+        <?php
+        }//fin for each
 
-
-</table>
+        ?>
+    </ul>
 
 
 </div>
+
+
+<?php
+include("include/footer.php");
+
+
+
+?>
