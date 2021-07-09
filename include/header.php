@@ -1,3 +1,8 @@
+<?php
+require('../functions/pdo.php');
+require('../functions/sqlStrings.php');
+
+?>
 <!DOCTYPE html>
 <html>
 
