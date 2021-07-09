@@ -60,3 +60,7 @@ td {
 th {
     box-shadow: 0px -10px 20px black inset;
 }
+.tableauProd img{
+    max-width:68px;
+    max-height: 68px;;
+}

@@ -49,27 +49,32 @@ $ID = $_GET["id"]; //récupère l'ID de la commande
                 <?php
                 $SQLprod=getProdFromCommandId($ID);
                 $RSProduits=$pdo->query($SQLprod);
-                $RowsProduits=$RSProduits->fetchAll(PDO::FETCH_ASSOC) ;
+                $RowsProduits=$RSProduits->fetchAll(PDO::FETCH_ASSOC);
                 ?>
 
                 <thead>
                     <tr>
                         <th>Nom Produit</th>
-                        <th>Image Produit</th>
-                        <th>Prix Produit</th>
+                        <th>TTC</th>
+                        <th>Prix HT</th>
+                        <th>Image</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                <?php foreach ($RowsProduits as $Row){
-                ?>
-                
-                    <tr>
-                        <td><?php echo $Row ["Produit_Nom"]; ?></td>
-                        <td><?php echo $Row ["Produit_Prix"]; ?></td>
-                        
-                    </tr>
-                <?php }?>
+                    <?php foreach ($RowsProduits as $Row){
+                    ?>
+                        <tr>
+                            <td><?php echo $Row ["Produit_Nom"]; ?></td>
+                            <td><?php echo $Row ["TTC"]; ?></td>
+                            <td><?php echo $Row ["HT"]; ?></td>
+                            <td><img src="img/<?php echo $Row ["Produit_Image"];?>"/></td>
+                            
+                            </td>
+                            
+                            
+                        </tr>
+                    <?php }?>
                 </tbody>
             </table>
         </div>
