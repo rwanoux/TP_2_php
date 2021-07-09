@@ -40,9 +40,11 @@ $ID = $_GET["id"]; //récupère l'ID de la commande
                     </tr>
                         <?php }?>
                 </tbody>
+            </table>
         </div>
+        
         <div class="col-md-6">
-            <div class="tableauProd">
+            <table class="tableauProd">
                 <thead>
                     <tr>
                         <th>ID Produit</th>
@@ -59,7 +61,7 @@ $ID = $_GET["id"]; //récupère l'ID de la commande
                         <td></td>
                         <td></td>
                 </tbody>
-            </div>
+            </table>
         </div>
     </div>
 </div>
