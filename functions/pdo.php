@@ -7,7 +7,7 @@ define("SERVER", "localhost");
 
 
 try {
-    $pdo= new PDO('mysql:host='.SERVER.';dbname='.BDD.','.USER.', '.PASS);
+    $pdo = new PDO("mysql:host=".SERVER.";dbname=".BDD.";charset=utf8", USER, PASS);
    
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
