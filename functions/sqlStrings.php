@@ -30,15 +30,14 @@ function getById($table, $Id){
     }
     return $sql;
 
-
+ 
 }
 function getCommandsByClientId($clientId){
     return "SELECT * FROM commandes WHERE Commande_Client_ID ='".$clientId."'";
 } 
 function getProdFromCommandId($comId){
 
-    return "SELECT produits.Produit_Nom, produits.Produit_Image, produits.Produit_Prix 
-    FROM  cmd_pdt, produits 
-    WHERE produits.Produit_ID=cmd_pdt.Cmd_Pdt_Produit_ID AND cmd_pdt.Cmd_Pdt_Commande_ID=".$comId;
+    return "SELECT produits.Produit_Nom, produits.Produit_Image, produits.Produit_Prix AS TTC, produits.Produit_Prix*0.8 AS HT 
+    FROM  cmd_pdt, produits WHERE produits.Produit_ID=cmd_pdt.Cmd_Pdt_Produit_ID AND cmd_pdt.Cmd_Pdt_Commande_ID=".$comId;
 }
 ?>
