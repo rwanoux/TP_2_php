@@ -20,24 +20,10 @@ include('functions/sqlStrings.php');
 <body>
 
     <header>
+
         <nav>
-            <ul>
-                <li>
-                    test
-                </li>
-
-                <li>
-                    test
-                </li>
-                <li>
-                    test
-                </li>
-                <li>
-                    test
-                </li>
-
-            </ul>
-
+            <h1>le super site des clients</h1>
+            <a href="index.php">retour liste </a>
         </nav>
 
 
