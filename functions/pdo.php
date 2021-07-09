@@ -7,11 +7,8 @@ define("SERVER", "localhost");
 
 
 try {
-    $dbh = new PDO('mysql:host='.SERVER.';dbname='.BDD.','.USER.', '.PASS);
-    foreach($dbh->query('SELECT * from FOO') as $row) {
-        print_r($row);
-    }
-    $dbh = null;
+    $pdo= new PDO('mysql:host='.SERVER.';dbname='.BDD.','.USER.', '.PASS);
+   
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
