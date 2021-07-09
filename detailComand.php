@@ -15,7 +15,7 @@ $RowsCommandes=$RSCommandes->fetchAll(PDO::FETCH_ASSOC);
         <th>Date commande</th>
         <th>Client n°</th>
     </tr>
-   
+
     <?php 
         foreach ($RowsCommandes as $ind=>$rowCommandes) {
             //déclaration des variables
@@ -30,4 +30,4 @@ $RowsCommandes=$RSCommandes->fetchAll(PDO::FETCH_ASSOC);
         <td><?php echo $commandeDate;?></td>
         <td><?php echo $commandeClient;?></td>
     </tr>
-<?php }?>
+    <?php }?>
