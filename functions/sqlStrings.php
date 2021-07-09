@@ -32,6 +32,8 @@ function getById($table, $Id){
 
 
 }
-
+function getCommandsByClientId($clientId){
+    return "SELECT * FROM commandes WHERE Commande_Client_ID =".$clientId;
+} 
 
 ?>
