@@ -24,6 +24,8 @@ include('functions/sqlStrings.php');
         <nav>
             <h1>le super site des clients</h1>
             <a href="index.php">retour liste </a>
+            <a href="ajoutProd.php">ajout de produit</a>
+            <a href="allProd.php">tous les produit</a>
         </nav>
 
 
